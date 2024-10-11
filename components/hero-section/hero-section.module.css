@@ -1,0 +1,171 @@
+.heroContainer {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.heroContent {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('https://www.yatricabs.com/_next/static/media/header.bc9e4e77.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: 3.1rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0;
+}
+
+.highlight {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.footerBanner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #d9d9d9;
+  color: black;
+  padding: 1rem;
+  border-radius: 50px;
+  transform: translateY(-50%);
+}
+
+.bannerItem {
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.bannerItem h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.bannerItem h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.bannerItem p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.appStores {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 4px 12px;
+    gap: 4px;
+    min-height: calc(100vh - 50px);
+  }
+
+  .left {
+    order: 1;
+    width: 50%;
+  }
+
+  .center {
+    order: 3;
+    width: 100%;
+  }
+
+  .right {
+    order: 2;
+    width: 50%;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .footerBanner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transform: translateY(0);
+    margin-top: 1rem;
+  }
+
+  .bannerItem {
+    padding: 0.5rem 0;
+  }
+
+  .bannerItem h2 {
+    font-size: 1.2rem;
+  }
+  
+  .bannerItem h3 {
+    font-size: 1rem;
+  }
+  
+  .bannerItem p {
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .footerBanner {
+    flex-wrap: wrap;
+  }
+
+  .bannerItem {
+    flex-basis: 50%;
+    padding: 0.5rem 0;
+  }
+
+  .bannerItem:last-child {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heroContent {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .bannerItem p {
+    font-size: 1.5rem;
+  }
+
+  .bannerItem h2 {
+    font-size: 2.7rem;
+  }
+
+  .bannerItem h3 {
+    font-size: 1.7rem;
+  }
+
+  .heroTitle {
+    flex: 1;
+  }
+}

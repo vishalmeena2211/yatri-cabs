@@ -1,0 +1,50 @@
+
+.infoSection {
+  background-color: var(--background-color);
+  padding: var(--padding-large);
+  margin-bottom: var(--padding-large);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+}
+
+.sectionTitle {
+  background-color: var(--primary-color);
+  color: var(--text-color-main);
+  padding: var(--padding-small) var(--padding-large);
+  text-align: center;
+  font-size: var(--font-size-large);
+  margin-bottom: var(--padding-small);
+  border-radius: var(--border-radius-small);
+}
+
+.infoList {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .infoSection {
+    padding: var(--padding-small);
+  }
+  .sectionTitle {
+    font-size: var(--font-size-small);
+  }
+  .infoList {
+    font-size: var(--font-size-xsmall);
+  }
+}
+
+.yatriInfoSections {
+  margin: 0 auto;
+  padding: var(--padding-large) var(--padding-small);
+  font-family: var(--font-family);
+}
+
+.infoItem {
+  margin-bottom: var(--padding-small);
+}
+
+.infoItem strong {
+  display: block;
+  margin-bottom: var(--padding-small);
+  color: var(--primary-color);
+}

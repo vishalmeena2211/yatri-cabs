@@ -1,0 +1,132 @@
+.container {
+    font-family: var(--font-family);
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 5px;
+}
+
+.column {
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    flex: 1;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-box-shadow);
+}
+
+.column ul {
+    padding: 5px 5px 0 20px;
+    text-align: left;
+}
+
+.column li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.column li:last-child {
+    margin-bottom: 0;
+}
+
+.illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    max-height: 250px;
+    padding: 0;
+}
+
+.illustration img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .heading {
+        font-size: 28px;
+    }
+
+    .column {
+        flex: 1 1 45%;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 24px;
+    }
+
+    .column {
+        flex: 1 1 100%;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .heading {
+        font-size: 14px;
+    }
+
+    .column {
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    .column li {
+        font-size: 6px;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        font-size: 8px;
+    }
+}

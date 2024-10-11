@@ -1,7 +1,133 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-family: Arial, sans-serif;
+  --secondary-color: #c0e3b6;
+  --text-color: #333;
+  --text-color-main: white;
+  --subtext-color: #555;
+  --highlight-color: #4CAF50;
+  --padding: 20px;
+  --margin-bottom: 40px;
+  --column-gap: 10px;
+  --font-size-large: 36px;
+  --font-size-medium: 22px;
+  --font-size-small: 12px;
+  --font-size-xsmall: 6px;
+  --padding-small: 8px;
+  --padding-xsmall: 3px 5px;
+  --primary-color: #4CAF50;
+  --border-radius: 20px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --hover-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --header-padding: 8px 16px;
+  --header-bg-color: white;
+  --logo-margin-right: 16px;
+  --logo-height: 60px;
+  --contact-margin-right: 16px;
+  --contact-number-right: 10px;
+  --contact-number-color: white;
+  --contact-number-font-weight: bold;
+  --contact-number-font-size: 18px;
+  --user-profile-img-size: 32px;
+  --user-profile-img-margin-right: 8px;
+  --user-name-font-size: 14px;
+  --user-name-font-weight: 500;
+  --download-app-border-radius: 50%;
+  --download-app-padding: 8px;
+  --download-app-margin-right: 16px;
+  --header-padding-sm: 4px 12px;
+  --header-height-sm: 50px;
+  --logo-height-sm: 30px;
+  --contact-number-font-size-sm: 10px;
+  --contact-number-right-sm: 4px;
+  --user-profile-img-size-sm: 24px;
+  --user-profile-img-margin-right-sm: 4px;
+  --user-name-font-size-sm: 10px;
+  --heading-font-size: 32px;
+  --heading-font-size-md: 36px;
+  --heading-font-size-lg: 48px;
+  --feature-title-font-size: 8px;
+  --feature-title-font-size-md: 18px;
+  --feature-description-font-size: 6px;
+  --feature-description-font-size-md: 14px;
+  --content-gap: 20px;
+  --max-width-md: 500px;
+  --max-width-lg: 800px;
+  --padding-large: 2rem;
+  --padding-small: 0.5rem;
+  --font-size-large: 1.5rem;
+  --font-size-small: 0.8rem;
+  --font-size-xsmall: 0.5rem;
+  --border-radius-large: 8px;
+  --border-radius-small: 4px;
+
+
+
+  /* Form Specific */
+
+
+  --form-autocomplete-container-width: 100%;
+  --form-autocomplete-input-padding: 10px;
+  --form-autocomplete-input-border-radius: 4px;
+  --form-autocomplete-input-border: 1px solid #ddd;
+  --form-autocomplete-input-bg-color: #f9f9f9;
+  --form-autocomplete-input-font-size: 14px;
+  --form-autocomplete-input-color: black;
+  --form-autocomplete-list-bg-color: white;
+  --form-autocomplete-list-border-radius: 4px;
+  --form-autocomplete-list-border: 1px solid #ddd;
+  --form-autocomplete-list-margin-top: 2px;
+  --form-autocomplete-list-max-height: 150px;
+  --form-autocomplete-list-z-index: 1000;
+  --form-autocomplete-item-padding: 10px;
+  --form-autocomplete-item-color: #333;
+  --form-autocomplete-item-hover-bg-color: #f0f0f0;
+  --form-input-group-margin-bottom: 16px;
+  --form-input-group-label-margin-bottom: 6px;
+  --form-input-group-label-font-size: 12px;
+  --form-input-group-label-color: #666;
+  --form-booking-form-bg-color: white;
+  --form-booking-form-padding: 24px;
+  --form-booking-form-border-radius: 8px;
+  --form-booking-form-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --form-booking-form-max-width: 700px;
+  --form-booking-form-width: 100%;
+  --form-booking-form-margin: 0 auto;
+  --form-trip-types-gap: 2rem;
+  --form-trip-types-margin-bottom: 16px;
+  --form-trip-type-font-size: 22px;
+  --form-trip-type-padding: 10px 16px;
+  --form-trip-type-border-radius: 4px;
+  --form-trip-type-transition: .3s ease all;
+  --form-trip-type-margin-right: .5rem;
+  --form-trip-type-bg-color: white;
+  --form-trip-type-border: 1px solid #4CAF50;
+  --form-trip-type-color: #888;
+  --form-trip-type-active-bg-color: #4CAF50;
+  --form-trip-type-active-color: white;
+  --form-form-inputs-column-gap: 2rem;
+  --form-button-div-width: 100%;
+  --form-explore-cabs-padding: 12px;
+  --form-explore-cabs-bg-color: #4CAF50;
+  --form-explore-cabs-color: white;
+  --form-explore-cabs-border: none;
+  --form-explore-cabs-border-radius: 4px;
+  --form-explore-cabs-font-size: 20px;
+  --form-explore-cabs-margin-top: 24px;
+  --form-explore-cabs-transition: background-color .3s ease;
+  --form-explore-cabs-hover-bg-color: #45a049;
+  --form-media-max-width-1200-trip-type-font-size: 20px;
+  --form-media-max-width-1200-explore-cabs-font-size: 18px;
+  --form-media-max-width-992-trip-type-font-size: 18px;
+  --form-media-max-width-992-explore-cabs-font-size: 16px;
+  --form-media-max-width-768-trip-type-font-size: 16px;
+  --form-media-max-width-768-explore-cabs-font-size: 14px;
+  --form-media-max-width-768-trip-types-gap: 0.5rem;
+  --form-media-max-width-576-trip-type-font-size: 14px;
+  --form-media-max-width-576-explore-cabs-font-size: 12px;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -35,67 +161,14 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
 
-/* Utility Classes */
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-3 {
-  margin-top: 1rem;
-}
-
-.mt-4 {
-  margin-top: 2rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 2rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-3 {
-  padding: 1rem;
-}
-
-.p-4 {
-  padding: 2rem;
+@media (max-width: 769px) {
+  hr {
+    display: none;
+  }
 }

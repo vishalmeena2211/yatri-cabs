@@ -1,0 +1,111 @@
+
+.container {
+    font-family: var(--font-family);
+    margin: 0 auto;
+    padding: var(--padding);
+}
+
+.tariffSection {
+    margin-bottom: var(--margin-bottom);
+}
+
+.tariffGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: var(--column-gap);
+}
+
+.tariffHeader, .tariffCell {
+    padding: 10px;
+    text-align: center;
+}
+
+.tariffHeader {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.tariffCell {
+    background-color: var(--secondary-color);
+}
+
+.comparisonSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: var(--margin-bottom);
+}
+
+.textContent {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.textContent h2 {
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+    margin-bottom: 10px;
+}
+
+.textContent p, .textContent span {
+    color: var(--subtext-color);
+}
+
+.textContent p {
+    font-size: var(--font-size-medium);
+}
+
+.textContent span {
+    font-weight: bold;
+}
+
+.highlight {
+    color: var(--highlight-color);
+}
+
+.imageContent {
+    position: relative;
+    max-width: 50%;
+}
+
+.imageContent img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .tariffGrid {
+        column-gap: 5px;
+    }
+    .tariffHeader, .tariffCell {
+        font-size: var(--font-size-small);
+        padding: var(--padding-small);
+    }
+    .textContent h2 {
+        font-size: 16px;
+    }
+    .textContent p {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 4px;
+    }
+    .textContent {
+        max-width: 50%;
+    }
+    .tariffHeader, .tariffCell {
+        font-size: var(--font-size-xsmall);
+        padding: var(--padding-xsmall);
+    }
+    .textContent h2 {
+        font-size: 14px;
+    }
+    .textContent p, .textContent span {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,95 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    padding: var(--header-padding);
+    white-space: nowrap;
+}
+
+.logo {
+    flex-shrink: 0;
+    margin-right: var(--logo-margin-right);
+}
+
+.logo img,
+.contactHours {
+    height: var(--logo-height);
+    width: auto;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: var(--contact-margin-right);
+}
+
+.contactNumber {
+    position: absolute;
+    right: var(--contact-number-right);
+    color: var(--contact-number-color);
+    font-weight: var(--contact-number-font-weight);
+    font-size: var(--contact-number-font-size);
+}
+
+.userActions {
+    display: flex;
+    align-items: center;
+}
+
+.downloadApp {
+    border-radius: var(--download-app-border-radius);
+    padding: var(--download-app-padding);
+    margin-right: var(--download-app-margin-right);
+}
+
+.userProfile,
+.downloadApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userProfile img {
+    width: var(--user-profile-img-size);
+    height: var(--user-profile-img-size);
+    margin-right: var(--user-profile-img-margin-right);
+}
+
+.userName,
+.downloadText {
+    font-size: var(--user-name-font-size);
+    font-weight: var(--user-name-font-weight);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: var(--header-padding-sm);
+        height: var(--header-height-sm);
+    }
+
+    .logo img,
+    .contactHours {
+        height: var(--logo-height-sm);
+    }
+
+    .contactNumber {
+        font-size: var(--contact-number-font-size-sm);
+        right: var(--contact-number-right-sm);
+    }
+
+    .downloadApp {
+        display: none;
+    }
+
+    .userProfile img {
+        width: var(--user-profile-img-size-sm);
+        height: var(--user-profile-img-size-sm);
+        margin-right: var(--user-profile-img-margin-right-sm);
+    }
+
+    .userName {
+        font-size: var(--user-name-font-size-sm);
+    }
+}

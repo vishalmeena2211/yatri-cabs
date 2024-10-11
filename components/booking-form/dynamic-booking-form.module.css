@@ -1,0 +1,183 @@
+.autocompleteContainer {
+    position: relative;
+    width: var(--form-autocomplete-container-width);
+}
+
+.autocompleteInput,
+.formInput {
+    width: 100%;
+    padding: var(--form-autocomplete-input-padding);
+    border: none;
+    border-bottom: var(--form-autocomplete-input-border);
+    background-color: tranparent;
+    font-size: var(--form-autocomplete-input-font-size);
+    color: var(--form-autocomplete-input-color);
+}
+
+.autocompleteInput:focus,
+.formInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.autocompleteList {
+    position: absolute;
+    background-color: var(--form-autocomplete-list-bg-color);
+    border-radius: var(--form-autocomplete-list-border-radius);
+    border: var(--form-autocomplete-list-border);
+    margin-top: var(--form-autocomplete-list-margin-top);
+    width: 100%;
+    max-height: var(--form-autocomplete-list-max-height);
+    overflow-y: auto;
+    z-index: var(--form-autocomplete-list-z-index);
+}
+
+.autocompleteItem {
+    padding: var(--form-autocomplete-item-padding);
+    cursor: pointer;
+    color: var(--form-autocomplete-item-color);
+}
+
+.autocompleteItem:hover {
+    background-color: var(--form-autocomplete-item-hover-bg-color);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--form-input-group-margin-bottom);
+}
+
+.inputGroup label {
+    margin-bottom: var(--form-input-group-label-margin-bottom);
+    font-size: var(--form-input-group-label-font-size);
+    color: var(--form-input-group-label-color);
+}
+
+.bookingForm {
+    background-color: var(--form-booking-form-bg-color);
+    padding: var(--form-booking-form-padding);
+    border-radius: var(--form-booking-form-border-radius);
+    box-shadow: var(--form-booking-form-box-shadow);
+    max-width: var(--form-booking-form-max-width);
+    width: var(--form-booking-form-width);
+    margin: var(--form-booking-form-margin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tripTypes,
+.journeyTypes {
+    display: flex;
+    justify-content: center;
+    gap: var(--form-trip-types-gap);
+    margin-bottom: var(--form-trip-types-margin-bottom);
+}
+
+.tripType,
+.journeyType {
+    font-size: var(--form-trip-type-font-size);
+    padding: var(--form-trip-type-padding);
+    border-radius: var(--form-trip-type-border-radius);
+    cursor: pointer;
+    transition: var(--form-trip-type-transition);
+    margin-right: var(--form-trip-type-margin-right);
+    background-color: var(--form-trip-type-bg-color);
+    border: var(--form-trip-type-border);
+    color: var(--form-trip-type-color);
+}
+
+.tripType:hover,
+.journeyType:hover {
+    background-color: var(--form-trip-type-active-bg-color);
+    color: var(--form-trip-type-active-color);
+}
+
+.tripType.active,
+.journeyType.active {
+    background-color: var(--form-trip-type-active-bg-color);
+    color: var(--form-trip-type-active-color);
+}
+
+.formInputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--form-form-inputs-column-gap);
+}
+
+.buttonDiv {
+    width: var(--form-button-div-width);
+    display: flex;
+    justify-content: center;
+}
+
+.exploreCabs {
+    padding: var(--form-explore-cabs-padding);
+    background-color: var(--form-explore-cabs-bg-color);
+    color: var(--form-explore-cabs-color);
+    border: var(--form-explore-cabs-border);
+    border-radius: var(--form-explore-cabs-border-radius);
+    cursor: pointer;
+    font-size: var(--form-explore-cabs-font-size);
+    margin-top: var(--form-explore-cabs-margin-top);
+    transition: var(--form-explore-cabs-transition);
+}
+
+.exploreCabs:hover {
+    background-color: var(--form-explore-cabs-hover-bg-color);
+}
+
+@media (max-width: 1200px) {
+
+    .tripType,
+    .journeyType {
+        font-size: var(--form-media-max-width-1200-trip-type-font-size);
+    }
+
+    .exploreCabs {
+        font-size: var(--form-media-max-width-1200-explore-cabs-font-size);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .tripType,
+    .journeyType {
+        font-size: var(--form-media-max-width-992-trip-type-font-size);
+    }
+
+    .exploreCabs {
+        font-size: var(--form-media-max-width-992-explore-cabs-font-size);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .tripType,
+    .journeyType {
+        font-size: var(--form-media-max-width-768-trip-type-font-size);
+    }
+
+    .exploreCabs {
+        font-size: var(--form-media-max-width-768-explore-cabs-font-size);
+    }
+
+    .tripTypes,
+    .journeyTypes {
+        gap: var(--form-media-max-width-768-trip-types-gap);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .tripType,
+    .journeyType {
+        font-size: var(--form-media-max-width-576-trip-type-font-size);
+    }
+
+    .exploreCabs {
+        font-size: var(--form-media-max-width-576-explore-cabs-font-size);
+    }
+}
