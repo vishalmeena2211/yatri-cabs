@@ -6,7 +6,8 @@
   --text-color: #333;
   --text-color-main: white;
   --subtext-color: #555;
-  --highlight-color: #4CAF50;
+  --highlight-color: #216900;
+  ;
   --padding: 20px;
   --margin-bottom: 40px;
   --column-gap: 10px;
@@ -16,7 +17,8 @@
   --font-size-xsmall: 6px;
   --padding-small: 8px;
   --padding-xsmall: 3px 5px;
-  --primary-color: #4CAF50;
+  --primary-color: #216900;
+  ;
   --border-radius: 20px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --hover-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -102,21 +104,25 @@
   --form-trip-type-transition: .3s ease all;
   --form-trip-type-margin-right: .5rem;
   --form-trip-type-bg-color: white;
-  --form-trip-type-border: 1px solid #4CAF50;
+  --form-trip-type-border: 1px solid #216900;
+  ;
   --form-trip-type-color: #888;
-  --form-trip-type-active-bg-color: #4CAF50;
+  --form-trip-type-active-bg-color: #216900;
+  ;
   --form-trip-type-active-color: white;
   --form-form-inputs-column-gap: 2rem;
   --form-button-div-width: 100%;
   --form-explore-cabs-padding: 12px;
-  --form-explore-cabs-bg-color: #4CAF50;
+  --form-explore-cabs-bg-color: #216900;
+  ;
   --form-explore-cabs-color: white;
   --form-explore-cabs-border: none;
   --form-explore-cabs-border-radius: 4px;
   --form-explore-cabs-font-size: 20px;
   --form-explore-cabs-margin-top: 24px;
   --form-explore-cabs-transition: background-color .3s ease;
-  --form-explore-cabs-hover-bg-color: #45a049;
+  --form-explore-cabs-hover-bg-color: #216900;
+  ;
   --form-media-max-width-1200-trip-type-font-size: 20px;
   --form-media-max-width-1200-explore-cabs-font-size: 18px;
   --form-media-max-width-992-trip-type-font-size: 18px;
@@ -126,14 +132,6 @@
   --form-media-max-width-768-trip-types-gap: 0.5rem;
   --form-media-max-width-576-trip-type-font-size: 14px;
   --form-media-max-width-576-explore-cabs-font-size: 12px;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html,
