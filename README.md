@@ -13,7 +13,7 @@ https://yatri-cabs-assessment.vercel.app
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/yatri-cabs-assessment.git
+    git clone https://github.com/vishalmeena2211/yatri-cabs-assessment.git
     ```
 2. Navigate to the project directory:
     ```bash
