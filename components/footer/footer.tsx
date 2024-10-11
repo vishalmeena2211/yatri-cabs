@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         }
         .footer-nav {
           display: flex;
-          gap: 4px;
+          gap: 10px;
           margin-bottom: 1rem;
           font-size: 0.9rem;
         }
@@ -112,6 +112,16 @@ const Footer: React.FC = () => {
           margin-top: 2rem;
           font-size: 0.9rem;
         }
+        @media (max-width: 768px) {
+
+          .newsletter {
+            flex-direction: column;
+
+            }
+            .footer-nav {
+            gap: 4px;
+            }
+        
       `}</style>
         </footer>
     );

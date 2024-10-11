@@ -18,7 +18,7 @@ const WhyChooseOneWayCab: React.FC = () => {
                     </ul>
                 </div>
                 <div className="column illustration">
-                    <Image src="https://www.yatricabs.com/_next/static/media/moving-car.4058733c.gif" alt="Illustration of a red car on a road" width={300} height={200} />
+                    <img src="https://www.yatricabs.com/_next/static/media/moving-car.4058733c.gif" alt="Illustration of a red car on a road" />
                 </div>
                 <div className="column">
                     <ul>
@@ -37,7 +37,6 @@ const WhyChooseOneWayCab: React.FC = () => {
             <style jsx>{`
                 .container {
                     font-family: Arial, sans-serif;
-                    max-width: 1200px;
                     margin: 0 auto;
                     padding: 20px;
                     text-align: center;
@@ -53,24 +52,25 @@ const WhyChooseOneWayCab: React.FC = () => {
                     display: flex;
                     justify-content: space-between;
                     margin-bottom: 30px;
-                    gap: 20px;
+                    gap: 5px;
                 }
                 .column {
-                    flex: 1;
                     background-color: #f0f0f0;
-                    border-radius: 10px;
+                    border: 1px solid black;
+                    border-radius: 20px;
                     padding: 20px;
-                    margin: 0 10px;
+                    // margin: 0 10px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    position: relative;
+                    flex:1;
                 }
                 .column:hover {
                     transform: translateY(-5px);
                     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                 }
                 .column ul {
-                    list-style-type: none;
-                    padding: 0;
+                    padding: 5px 5px 0px 20px;
                     text-align: left;
                 }
                 .column li {
@@ -78,11 +78,22 @@ const WhyChooseOneWayCab: React.FC = () => {
                     font-size: 16px;
                     line-height: 1.6;
                 }
+                .column li:last-child {
+                    margin-bottom: 0px;
+                }
                 .illustration {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: #e6f3ff;
+                    border:none;
+                    max-height: 250px;
+                    padding: 0px;
+            }
+                .illustration img{
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 10px;
                 }
                 .footer {
                     color: #666;
@@ -94,12 +105,45 @@ const WhyChooseOneWayCab: React.FC = () => {
                     color: #4CAF50;
                     font-weight: bold;
                 }
-                @media (max-width: 768px) {
-                    .content {
-                        flex-direction: column;
+                @media (max-width: 1024px) {
+                    .heading {
+                        font-size: 28px;
                     }
                     .column {
-                        margin: 10px 0;
+                        flex: 1 1 45%;
+                    }
+                    .footer {
+                        font-size: 16px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .heading {
+                        font-size: 24px;
+                    }
+                    .column {
+                        flex: 1 1 100%;
+                    }
+                    .footer {
+                        font-size: 14px;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .container{
+                        padding: 5px;
+                    }
+                    .heading {
+                        font-size: 14px;
+                    }
+                    .column {
+                        padding: 0px;
+                        border-radius: 10px;
+                    }
+                    .column li {
+                        font-size: 6px;
+                        margin-bottom: 5px;
+                    }
+                    .footer {
+                        font-size: 8px;
                     }
                 }
             `}</style>

@@ -3,6 +3,29 @@
 import React from 'react';
 import Image from 'next/image';
 
+const features = [
+    {
+        imageUrl: "https://www.yatricabs.com/_next/static/media/fast.902977f5.svg",
+        title: "FAST RESPONSE TIME",
+        description: "Experience The Best Car Rental Service With Driver For Local Or Outstation Trips. Enjoy Prompt Response Times And Seamless Car Hire Service, Ensuring You Get On The Road Quickly"
+    },
+    {
+        imageUrl: "https://www.yatricabs.com/_next/static/media/peoples.1f196f36.svg",
+        title: "VAST FLEET",
+        description: "We Offer A Wide Range Of Rental Cars Including Sedans, SUVs, MUVs, Premium Sedans, And Tempo Travellers To Meet All Your Needs."
+    },
+    {
+        imageUrl: "https://www.yatricabs.com/_next/static/media/router.2953c188.svg",
+        title: "EASY TO ORDER",
+        description: "Easily Book A Cab Online Through Our User-Friendly Website, Mobile Application, Or By Calling Our Customer Support Team."
+    },
+    {
+        imageUrl: "https://www.yatricabs.com/_next/static/media/doller.8cb6fc6a.svg",
+        title: "GREAT TARIFFS",
+        description: "Rent A Car At The Lowest Rates! Our Car Hire Tariffs Are Highly Competitive Compared To Other Operators. Book Online Cabs At The Best Prices With Yatri Car Rental."
+    }
+];
+
 const YatriLanding: React.FC = () => {
     return (
         <div className="yatri-container">
@@ -11,35 +34,20 @@ const YatriLanding: React.FC = () => {
             </h1>
             <div className="yatri-content">
                 <div className="yatri-image">
-                    <Image
-                        layout="responsive"
-                        width={500}
-                        height={250}
+                    <img
                         src="https://www.yatricabs.com/_next/static/media/car.32d36d5d.svg"
                         alt="Yatri Car with Customers"
                     />
                 </div>
                 <div className="yatri-features">
-                    <FeatureItem
-                        icon="🚩"
-                        title="FAST RESPONSE TIME"
-                        description="Experience The Best Car Rental Service With Driver For Local Or Outstation Trips. Enjoy Prompt Response Times And Seamless Car Hire Service, Ensuring You Get On The Road Quickly"
-                    />
-                    <FeatureItem
-                        icon="👥"
-                        title="VAST FLEET"
-                        description="We Offer A Wide Range Of Rental Cars Including Sedans, SUVs, MUVs, Premium Sedans, And Tempo Travellers To Meet All Your Needs."
-                    />
-                    <FeatureItem
-                        icon="📱"
-                        title="EASY TO ORDER"
-                        description="Easily Book A Cab Online Through Our User-Friendly Website, Mobile Application, Or By Calling Our Customer Support Team."
-                    />
-                    <FeatureItem
-                        icon="💰"
-                        title="GREAT TARIFFS"
-                        description="Rent A Car At The Lowest Rates! Our Car Hire Tariffs Are Highly Competitive Compared To Other Operators. Book Online Cabs At The Best Prices With Yatri Car Rental."
-                    />
+                    {features.map((feature, index) => (
+                        <FeatureItem
+                            key={index}
+                            imageUrl={feature.imageUrl}
+                            title={feature.title}
+                            description={feature.description}
+                        />
+                    ))}
                 </div>
             </div>
             <style jsx>{`
@@ -49,10 +57,11 @@ const YatriLanding: React.FC = () => {
                     padding: 20px;
                 }
                 .yatri-heading {
-                    font-size: 36px;
+                    font-size: 32px;
                     text-align: center;
-                    color: #333;
+                    color: #555;
                     margin-bottom: 20px;
+                    font-weight: bold;
                 }
                 .yatri-green {
                     color: #2e7d32;
@@ -65,23 +74,38 @@ const YatriLanding: React.FC = () => {
                 .yatri-image {
                     text-align: center;
                 }
+                .yatri-image img {
+                   height; 100%;
+                   width: 100%;
+                   object-fit: cover;
+                }
                 .yatri-features {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
+                    column-gap: 20px;
                 }
                 @media (min-width: 768px) {
+                    .yatri-heading {
+                        font-size: 36px;
+                    }
                     .yatri-content {
                         flex-wrap: nowrap;
                     }
-                   
                     .yatri-features {
-                    grid-template-columns: 1fr;
-                    
+                        max-width: 500px;
+                        grid-template-columns: 1fr;
                     }
+                    .yatri.image{
+                        flex: 1;
+                    }
+                    
                 }
                 @media (min-width: 1024px) {
                     .yatri-heading {
                         font-size: 48px;
+                    }
+                    .yatri-features {
+                        max-width: 800px;
                     }
                 }
             `}</style>
@@ -90,15 +114,22 @@ const YatriLanding: React.FC = () => {
 };
 
 interface FeatureItemProps {
-    icon: string;
+    imageUrl: string;
     title: string;
     description: string;
 }
 
-const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title, description }) => {
+const FeatureItem: React.FC<FeatureItemProps> = ({ imageUrl, title, description }) => {
     return (
         <div className="feature-item">
-            <div className="feature-icon">{icon}</div>
+            <div className="feature-icon">
+                <Image
+                    src={imageUrl}
+                    alt={title}
+                    width={30}
+                    height={30}
+                />
+            </div>
             <div className="feature-content">
                 <h2 className="feature-title">{title}</h2>
                 <p className="feature-description">{description}</p>
@@ -110,24 +141,28 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title, description }) =
                     margin-bottom: 20px;
                 }
                 .feature-icon {
-                    font-size: 24px;
                     margin-right: 15px;
-                    min-width: 30px;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
                 }
                 .feature-title {
                     color: #2e7d32;
-                    font-size: 16px;
+                    font-size: 8px;
                     margin: 0 0 5px 0;
                 }
                 .feature-description {
                     color: #666;
-                    font-size: 14px;
+                    font-size: 6px;
                     line-height: 1.5;
                     margin: 0;
                 }
                 @media (min-width: 768px) {
                     .feature-title {
                         font-size: 18px;
+                    }
+                    .feature-description {
+                        font-size: 14px;
                     }
                 }
             `}</style>

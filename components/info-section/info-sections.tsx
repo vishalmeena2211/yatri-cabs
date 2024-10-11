@@ -19,7 +19,7 @@ const InfoItem: React.FC<InfoItemProps> = ({ title, content }) => {
         .info-item strong {
           display: block;
           margin-bottom: 0.5rem;
-          color: #2e7d32;
+          color: #2estyle
         }
       `}</style>
         </li>
@@ -58,16 +58,19 @@ const InfoSection: React.FC<InfoSectionProps> = ({ title, items }) => {
           border-radius: 4px;
         }
         .info-list {
-          list-style-type: none;
           padding: 0;
         }
         @media (max-width: 768px) {
           .info-section {
-            padding: 1rem;
+            padding: 0.5rem;
           }
           .section-title {
-            font-size: 1.2rem;
+            font-size: 0.8rem;
           }
+            .info-list {
+                font-size: 0.5rem;
+            }
+        }
         }
       `}</style>
         </section>
