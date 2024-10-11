@@ -1,6 +1,6 @@
 "use client"
-import React, { useState } from 'react';
-import { City } from 'country-state-city';
+import React, { useState, ChangeEvent } from 'react';
+import { City, ICity } from 'country-state-city';
 
 type FormField = {
     id: string;
@@ -43,28 +43,33 @@ const formVariants: FormVariant[] = [
     },
 ];
 
-const CityAutocomplete = ({ onSelect, placeholder }) => {
-    const [inputValue, setInputValue] = useState('');
-    const [filteredCities, setFilteredCities] = useState([]);
+type CityAutocompleteProps = {
+    onSelect: (cityName: string) => void;
+    placeholder?: string;
+};
 
-    const handleChange = (e) => {
+const CityAutocomplete: React.FC<CityAutocompleteProps> = ({ onSelect, placeholder }) => {
+    const [inputValue, setInputValue] = useState<string>('');
+    const [filteredCities, setFilteredCities] = useState<ICity[]>([]);
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setInputValue(value);
 
         if (value) {
-            const filtered = City.getCitiesOfCountry('IN').filter(city =>
+            const filtered = City?.getCitiesOfCountry('IN')?.filter(city =>
                 city.name.toLowerCase().includes(value.toLowerCase())
             );
-            setFilteredCities(filtered);
+            setFilteredCities(filtered || []);
         } else {
             setFilteredCities([]);
         }
     };
 
-    const handleSelect = (city) => {
+    const handleSelect = (city: ICity) => {
         setInputValue(city.name);
         setFilteredCities([]);
-        // onSelect(city.name); // Pass selected city back to parent
+        onSelect(city.name); // Pass selected city back to parent
     };
 
     return (
@@ -78,9 +83,9 @@ const CityAutocomplete = ({ onSelect, placeholder }) => {
             />
             {filteredCities.length > 0 && (
                 <ul className="autocomplete-list">
-                    {filteredCities.map((city) => (
+                    {filteredCities.map((city, index) => (
                         <li
-                            key={city.id}
+                            key={index}
                             onClick={() => handleSelect(city)}
                             className="autocomplete-item"
                         >
@@ -148,7 +153,7 @@ export default function DynamicBookingForm() {
                 <label htmlFor={field.id}>{field.label}</label>
                 {/* Use CityAutocomplete for specific fields */}
                 {field.id === "from" || field.id === "to" ? (
-                    <CityAutocomplete placeholder={field.placeholder} />
+                    <CityAutocomplete placeholder={field.placeholder} onSelect={() => { }} />
                 ) : (
                     <input
                         type={field.type}

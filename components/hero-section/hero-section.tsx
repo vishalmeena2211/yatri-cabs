@@ -21,7 +21,6 @@ const HeroSection: React.FC = () => {
           <h2>Transparent Billing</h2>
           <p>GPS Based Billing | No Km Tampering</p>
         </div>
-        {/* <hr /> */}
         <div className="banner-item center">
           <h3>Download Now!</h3>
           <div className="app-stores">
@@ -29,7 +28,6 @@ const HeroSection: React.FC = () => {
             <Image src="https://www.yatricabs.com/_next/static/media/app_store.e55a83b4.svg" alt="Download on the App Store" width={150} height={50} />
           </div>
         </div>
-        {/* <hr /> */}
         <div className="banner-item right">
           <h2>No return fare</h2>
           <p>One-Way cab fare | No hidden charges</p>
@@ -148,14 +146,11 @@ const HeroSection: React.FC = () => {
             flex-wrap: wrap;
             gap: 1rem;
             transform: translateY(0);
+            margin-top: 1rem;
           }
           
           .banner-item {
             padding: 0.5rem 0;
-          }
-
-          .banner-item:not(:last-child) {
-            border-bottom: 1px solid #999;
           }
         }
 
