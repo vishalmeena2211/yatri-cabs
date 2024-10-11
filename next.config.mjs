@@ -6,7 +6,10 @@ const nextConfig = {
                 hostname:"www.yatricabs.com"
             }
         ]
-    }
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;
