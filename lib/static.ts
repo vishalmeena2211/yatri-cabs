@@ -74,8 +74,8 @@ export const formVariants: FormVariant[] = [
         fields: [
             { id: 'from', label: 'FROM', type: 'text', placeholder: 'Enter pickup location' },
             { id: 'to', label: 'TO', type: 'text', placeholder: 'Enter drop location' },
-            { id: 'pickupDate', label: 'PICK UP DATE', type: 'date' },
-            { id: 'pickupTime', label: 'PICK UP AT', type: 'time' },
+            { id: 'pickupDate', label: 'PICK UP DATE', type: 'date',placeholder: 'Enter pickup date' },
+            { id: 'pickupTime', label: 'PICK UP AT', type: 'time', placeholder: 'Enter pickup at' },
         ],
     },
     {
@@ -83,7 +83,7 @@ export const formVariants: FormVariant[] = [
         fields: [
             { id: 'from', label: 'FROM', type: 'text', placeholder: 'Enter pickup location' },
             { id: 'to', label: 'TO', type: 'text', placeholder: 'Enter drop location' },
-            { id: 'when', label: 'WHEN', type: 'datetime-local' },
+            { id: 'when', label: 'WHEN', type: 'datetime-local', placeholder: 'Enter when' },
         ],
     },
     {
@@ -91,8 +91,8 @@ export const formVariants: FormVariant[] = [
         fields: [
             { id: 'from', label: 'PICK UP', type: 'text', placeholder: 'Enter pickup location' },
             { id: 'to', label: 'DROP', type: 'text', placeholder: 'Enter drop location' },
-            { id: 'date', label: 'DATE', type: 'date' },
-            { id: 'time', label: 'TIME', type: 'time' },
+            { id: 'date', label: 'DATE', type: 'date', placeholder: 'Enter date' },
+            { id: 'time', label: 'TIME', type: 'time', placeholder: 'Enter time' },
         ],
     },
 ];
