@@ -164,9 +164,3 @@ a {
     color-scheme: light;
   }
 }
-
-@media (max-width: 769px) {
-  hr {
-    display: none;
-  }
-}

@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
           <h2>Transparent Billing</h2>
           <p>GPS Based Billing | No Km Tampering</p>
         </div>
-        <hr/>
+        <hr className='hr' />
         {/* Center banner item with app download links */}
         <div className={`${styles.bannerItem} ${styles.center}`}>
           <h3>Download Now!</h3>
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
             <Image src={APP_STORE_IMAGE} alt="Download on the App Store" width={150} height={50} />
           </div>
         </div>
-        <hr />
+        <hr className='hr' />
         {/* Right banner item */}
         <div className={`${styles.bannerItem} ${styles.right}`}>
           <h2>No return fare</h2>
